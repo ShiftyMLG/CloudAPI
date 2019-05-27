@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ApiComponent } from './api/api.component';
+import { HomeComponent } from './home/home.component';
+import { SearchComponent } from './search/search.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: 'app-api' , component: ApiComponent},
+  {path: 'app-home', component: HomeComponent},
+  {path: 'app-search', component: SearchComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
