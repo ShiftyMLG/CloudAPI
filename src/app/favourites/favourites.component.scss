@@ -1,7 +1,12 @@
 p-card{
     width: 20%;
 }
-
+p-button{
+  margin: 10px;
+}
+input{
+  margin: 10px
+}
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -12,13 +17,22 @@ p-card{
     font-size: 30px;
     text-align: center;
   }
-input{
-  margin: 10px;
-}
+
 img{
 	filter: invert(100%);  
 }
 
 .tags{
   font-size: 12px;
+}
+.right{
+  float: right;
+  margin: 10px;
+}
+.left{
+  margin: 10px;
+}
+
+.item{
+  margin: 10px;
 }

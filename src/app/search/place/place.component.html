@@ -1,0 +1,17 @@
+<div class="p-col">
+  <p-card>
+    <p><b>{{place.name}}</b></p>
+    <br>
+    <img src="{{place.categories[0].icon.prefix}}64{{place.categories[0].icon.suffix}}" alt="">
+    <br>
+    <p> <b>Adres: </b> {{place.location.address}}</p>
+    <p> <b>Gemeente: </b>{{place.location.city}}</p>
+    <p> <b>Postcode: </b>{{place.location.postalCode}}</p>
+    <br>
+    <br>
+    <p class="tags"><b>ID: </b>{{place.id}} </p>
+    <p class="tags"> <b>Type: </b>{{place.categories[0].name}}</p>
+    <br>
+    <p-button label="Add to favourites" (click)="Add()"></p-button>
+  </p-card>
+</div>

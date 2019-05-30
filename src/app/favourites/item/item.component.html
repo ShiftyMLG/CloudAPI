@@ -1,0 +1,27 @@
+<div class="grid-container" *ngIf="place">
+      <p-card>
+        <br>
+        <div *ngIf="edit; else elseBlock">
+          <input type="text" pInputText pInputText [(ngModel)]="nameInput"/>
+          <p-button icon="pi pi-check" (click)="SaveInput(place.id)" class="check"></p-button>
+        </div>
+        <ng-template #elseBlock><p><b>{{place.name}}</b></p></ng-template>
+        <br>
+        <img src="{{place.image}}" alt="">
+        <br>
+        <p><b>Adres: </b> {{place.address}}</p>
+        <p><b>Stad: </b> {{place.city}}</p>
+        <br>
+        <p class="tags"><b>Foursquare ID: </b>{{place.fsId}}</p>
+        <p class="tags"><b>System ID: </b>{{place.id}}</p>
+        <p class="tags"><b>Tags: </b>{{place.tag}}</p>
+        <br>
+        <button pButton type="button" label="Delete" class="ui-button-rounded ui-button-danger" (click)="Delete(place.id)"></button>
+        <br>
+        <br>
+        <div *ngIf="!edit">
+          <button pButton type="button" label="Edit" class="ui-button-rounded"  icon="pi pi-pencil" (click)="Edit()"></button>
+        </div>
+      </p-card>
+</div>
+

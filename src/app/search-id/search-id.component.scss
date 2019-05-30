@@ -1,4 +1,9 @@
+img{
+	filter: invert(100%);
+  
+}
 p-card{
+    margin: 10px;
     width: 20%;
 }
 
@@ -14,9 +19,6 @@ p-card{
   }
 input{
   margin: 10px;
-}
-img{
-	filter: invert(100%);  
 }
 
 .tags{

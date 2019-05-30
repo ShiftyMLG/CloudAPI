@@ -16,6 +16,15 @@ import {InputTextModule} from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './login/login.component';
+import { SearchIdComponent } from './search-id/search-id.component';
+import { FavouritesComponent } from './favourites/favourites.component';
+import { PlaceComponent } from './api/place/place.component';
+import { ItemComponent } from './favourites/item/item.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
@@ -23,9 +32,15 @@ import { SearchComponent } from './search/search.component';
     ToolbarComponent,
     ApiComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    LoginComponent,
+    SearchIdComponent,
+    FavouritesComponent,
+    PlaceComponent,
+    ItemComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     ToolbarModule,
@@ -33,7 +48,8 @@ import { SearchComponent } from './search/search.component';
     CardModule,
     HttpClientModule,
     InputTextModule,
-    FormsModule
+    FormsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

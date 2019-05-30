@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { isNgTemplate } from '@angular/compiler';
+import { favourite } from '../favourite';
 
 @Component({
   selector: 'app-api',
@@ -28,4 +30,6 @@ export class ApiComponent implements OnInit {
       }
     );
   }
+
+  
 }

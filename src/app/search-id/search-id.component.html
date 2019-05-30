@@ -1,0 +1,18 @@
+<input type="text" pInputText pInputText [(ngModel)]="searchIdInput"/>
+<p-button label="Click" (click)="searchById()"></p-button>
+
+<div class="grid-container" *ngIf="response !== undefined">
+  <div class="p-col">
+    <p-card>
+      <p><b>{{response.response.venue.name}}</b></p>
+      <br>
+      <img src="{{response.response.venue.categories[0].icon.prefix}}64{{response.response.venue.categories[0].icon.suffix}}" alt="">
+      <p><b>Adres: </b> {{response.response.venue.location.address}}</p>
+      <br>
+      <p> <b>Stad: </b>{{response.response.venue.location.city}}</p>
+      <br>
+      <p class="tags">Type: {{response.response.venue.categories[0].name}}</p>
+      <br>
+    </p-card>
+  </div>
+</div>

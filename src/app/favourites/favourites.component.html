@@ -1,0 +1,26 @@
+<p style="margin-left: 10px">Items per pagina: </p>
+
+<select style="margin-left: 10px" [(ngModel)]="pageSize" (change)="ShowAll()">
+    <option *ngFor="let item of options" value={{item}}>{{item}}</option>
+</select>
+  <br>
+  <input type="text" pInputText pInputText [(ngModel)]="searchIdInput" placeholder="ID"/>
+  <p-button label="Search" (click)="searchById()"></p-button>
+<br>
+<br>
+  <input type="text" pInputText pInputText [(ngModel)]="searchTagInput" placeholder="TAG" />
+  <p-button label="Search" (click)="searchByTag()"></p-button>
+<br>
+  <p-button label="Show All" (click)="ShowAll()" class="left"></p-button>
+<br>
+<br>
+<div class="grid-container" *ngIf="response">
+  <app-item *ngFor="let item of response"[place]="item" class="item" (reload)="Reload($event)"></app-item>
+</div>
+
+<div class="grid-container" *ngIf="search">
+   <app-item class="item" (reload)="Reload($event)" [place]="search"></app-item>
+</div>
+
+<p-button label="Previous" (click)="PrevPage()"></p-button>
+<p-button label="Next" (click)="NextPage()"></p-button>

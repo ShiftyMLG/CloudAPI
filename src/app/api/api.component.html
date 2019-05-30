@@ -1,19 +1,6 @@
 <input type="text" pInputText pInputText [(ngModel)]="location"/>
 <p-button label="Click" (click)="search()"></p-button>
 
-
 <div class="grid-container" *ngIf="response !== undefined">
-  <div class="p-col" *ngFor="let item of response.response.venues">
-    <p-card>
-      <p><b>{{item.name}}</b></p>
-      <br>
-      <br>
-      <p> <b>Adres: </b> {{item.location.address}}</p>
-      <p> <b>Gemeente: </b>{{item.location.city}}</p>
-      <p> <b>Postcode: </b>{{item.location.postalCode}}</p>
-      <!--<p>{{item.location.formattedAddress[1]}}</p>-->
-      <br>
-      <br>
-    </p-card>
-  </div>
+  <app-place *ngFor="let item of response.response.venues"[place]="item" ></app-place>
 </div>

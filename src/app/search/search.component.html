@@ -3,17 +3,5 @@
 <p-button label="Click" (click)="search()"></p-button>
 
 <div class="grid-container" *ngIf="response !== undefined">
-  <div class="p-col" *ngFor="let item of response.response.venues">
-    <p-card>
-      <p><b>{{item.name}}</b></p>
-      <br>
-      <img src="{{item.categories[0].icon.prefix}}128{{item.categories[0].icon.suffix}}" alt="">
-      <p><b>Adres: </b> {{item.location.address}}</p>
-      <br>
-      <p> <b>Stad: </b>{{item.location.city}}</p>
-      <br>
-      <p class="tags">Type: {{item.categories[0].name}}</p>
-      <br>
-    </p-card>
-  </div>
+  <app-place *ngFor="let item of response.response.venues"[place]="item" ></app-place>
 </div>
