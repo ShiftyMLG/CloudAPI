@@ -1,3 +1,3 @@
 # CloudAPI
 
-URL: michielmeurs.me
+URL: http://michielmeurs.me/
