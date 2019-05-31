@@ -46,31 +46,31 @@ export class ApiService {
    }
 
    GetFavourites(page : number, pageSize : number): Observable<any> {
-     this.url = `https://localhost:44311/api/v1/favourites/?page=${page}&length=${pageSize}`
+     this.url = `http://178.62.225.237:8080/api/v1/favourites/?page=${page}&length=${pageSize}`
      return this.http.get(this.url)
    }
    GetFavouriteById(Id : string): Observable<any> {
-    this.url = 'https://localhost:44311/api/v1/favourites/'
+    this.url = 'http://178.62.225.237:8080/api/v1/favourites/'
     return this.http.get(this.url + Id)
   }
 
    PostFavourite(place : favourite){
-     this.url = 'https://localhost:44311/api/v1/favourites'
+     this.url = 'http://178.62.225.237:8080/api/v1/favourites'
      return this.http.post(this.url, place)
    }
    DeleteFavourite(Id : number){
-     this.url= 'https://localhost:44311/api/v1/favourites/'
+     this.url= 'http://178.62.225.237:8080/api/v1/favourites/'
      return this.http.delete(this.url + Id)
    }
 
    PutFavourite(Id: number, item: PutReturn){
-     this.url='https://localhost:44311/api/v1/favourites/'
+     this.url='http://178.62.225.237:8080/api/v1/favourites/'
      console.log(this.url + Id)
      return this.http.put(this.url + Id, item)
    }
 
    GetFiltered(tag: string){
-    this.url='https://localhost:44311/api/v1/favourites?tag='
+    this.url='http://178.62.225.237:8080/api/v1/favourites?tag='
     return this.http.get(this.url + tag)
   }
 }

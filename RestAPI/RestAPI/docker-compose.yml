@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  database:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    container_name: "SQL"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=SigmaIsAPasswordNow2
+    restart: always
+#    ports:
+#      - 1433:1433
+  api:
+    build: .
+    ports:
+      - 8080:80
+    restart: always
+  angular:
+    build: ./angular
+    ports:
+      - 80:80
+    restart: always

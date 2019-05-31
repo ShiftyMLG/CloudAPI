@@ -1,4 +1,0 @@
-export class Keys{
-    public client_id:string = "POIQ1UTNM3JMUZ10D2EMGFSDJF3VJYO5M3ZURWR3VRA2NGRL";
-    public client_secret:string = "HQ5RM5BHGUUJK5P0LQYKNXUVLB2RZHQHHOMBITGEL4Z3U4N4";
-}
