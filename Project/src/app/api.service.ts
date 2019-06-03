@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, observable } from 'rxjs';
 import { Keys } from './Keys';
 import { favourite, PutReturn } from './favourite';
+import { LoginService } from './login.service';
 @Injectable({
   providedIn: 'root'
 })
@@ -19,13 +20,21 @@ export class ApiService {
   pageLength : number;
   page : number;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private auth: LoginService) {
     this.keys = new Keys()
     this.clientId = this.keys.client_id;
     this.clientSecret = this.keys.client_secret;
     this.searchQuerry = "search"
     this.trendingQuerry = "trending"
 
+   }
+
+   GetHeader(){
+    return {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.auth.id}`
+      })
+    }
    }
 
    GetTrending(location: String): Observable<any> {
@@ -47,30 +56,30 @@ export class ApiService {
 
    GetFavourites(page : number, pageSize : number): Observable<any> {
      this.url = `http://178.62.225.237:8080/api/v1/favourites/?page=${page}&length=${pageSize}`
-     return this.http.get(this.url)
+     return this.http.get(this.url, this.GetHeader())
    }
    GetFavouriteById(Id : string): Observable<any> {
     this.url = 'http://178.62.225.237:8080/api/v1/favourites/'
-    return this.http.get(this.url + Id)
+    return this.http.get(this.url + Id, this.GetHeader())
   }
 
    PostFavourite(place : favourite){
      this.url = 'http://178.62.225.237:8080/api/v1/favourites'
-     return this.http.post(this.url, place)
+     return this.http.post(this.url, place, this.GetHeader())
    }
    DeleteFavourite(Id : number){
      this.url= 'http://178.62.225.237:8080/api/v1/favourites/'
-     return this.http.delete(this.url + Id)
+     return this.http.delete(this.url + Id, this.GetHeader())
    }
 
    PutFavourite(Id: number, item: PutReturn){
      this.url='http://178.62.225.237:8080/api/v1/favourites/'
      console.log(this.url + Id)
-     return this.http.put(this.url + Id, item)
+     return this.http.put(this.url + Id, item, this.GetHeader())
    }
 
    GetFiltered(tag: string){
     this.url='http://178.62.225.237:8080/api/v1/favourites?tag='
-    return this.http.get(this.url + tag)
+    return this.http.get(this.url + tag, this.GetHeader())
   }
 }

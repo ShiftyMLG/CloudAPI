@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {GoogleSignInSuccess} from 'angular-google-signin';
+import { LoginService } from '../login.service';
 
 
 @Component({
@@ -9,12 +10,12 @@ import {GoogleSignInSuccess} from 'angular-google-signin';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor( private id : LoginService) { }
 
   ngOnInit() {
   }
   private myClientId: string = '802138658731-7gqqg9oftq3vs1nm0grj2tohjsqaj76b.apps.googleusercontent.com'
-  
+
   onGoogleSignInSuccess(event: GoogleSignInSuccess) {
     let googleUser: gapi.auth2.GoogleUser = event.googleUser;
     let id: string = googleUser.getId();
@@ -23,6 +24,7 @@ export class LoginComponent implements OnInit {
       profile
         .getId()); // Do not send to your backend! Use an ID token instead.
     console.log('Name: ' + profile.getName());
+    this.id.id=googleUser.getAuthResponse().id_token;
   }
 
 }

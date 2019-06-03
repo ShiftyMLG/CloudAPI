@@ -12537,11 +12537,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\michiel\\Documents\\School\\Cloud API\\RestAPI\\RestAPI\\RestAPI.csproj",
+      "projectUniqueName": "C:\\Users\\michiel\\Documents\\School\\Cloud API\\Project\\RestAPI\\RestAPI\\RestAPI.csproj",
       "projectName": "RestAPI",
-      "projectPath": "C:\\Users\\michiel\\Documents\\School\\Cloud API\\RestAPI\\RestAPI\\RestAPI.csproj",
+      "projectPath": "C:\\Users\\michiel\\Documents\\School\\Cloud API\\Project\\RestAPI\\RestAPI\\RestAPI.csproj",
       "packagesPath": "C:\\Users\\michiel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\michiel\\Documents\\School\\Cloud API\\RestAPI\\RestAPI\\obj\\",
+      "outputPath": "C:\\Users\\michiel\\Documents\\School\\Cloud API\\Project\\RestAPI\\RestAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

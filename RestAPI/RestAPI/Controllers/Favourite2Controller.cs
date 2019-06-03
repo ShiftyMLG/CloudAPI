@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RestAPI.Models;
 
@@ -16,6 +17,7 @@ namespace RestAPI.Controllers
             this.context = context;
         }
 
+        [Authorize]
         [HttpGet]
         public List<Favourite> GetAllFavourites(string tag, int? page, int length = 6)
         {
@@ -33,6 +35,7 @@ namespace RestAPI.Controllers
 
         }
 
+        [Authorize]
         [Route("{id}")]
         [HttpGet]
         public IActionResult GetFavourite(int id)
@@ -43,6 +46,8 @@ namespace RestAPI.Controllers
              
                 return Ok(favourite);
         }
+
+        [Authorize]
         [Route("{id}")]
         [HttpDelete]
         public IActionResult DeleteFavourite(int id)
@@ -55,6 +60,7 @@ namespace RestAPI.Controllers
             return NoContent();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult CreateFavourite([FromBody] Favourite newFavourite)
         {
@@ -64,6 +70,7 @@ namespace RestAPI.Controllers
             return Created("", newFavourite);
         }
 
+        [Authorize]
         [HttpPut]
         [Route("{id}")]
         public IActionResult UpdateFavourite([FromBody] Favourite updateFavourite)

@@ -12,3 +12,17 @@ C:\Users\michiel\Documents\School\Cloud API\RestAPI\RestAPI\obj\Debug\netcoreapp
 C:\Users\michiel\Documents\School\Cloud API\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.RazorTargetAssemblyInfo.cache
 C:\Users\michiel\Documents\School\Cloud API\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.dll
 C:\Users\michiel\Documents\School\Cloud API\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.pdb
+C:\Users\michiel\Documents\School\Cloud API\Project\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\RestAPI.deps.json
+C:\Users\michiel\Documents\School\Cloud API\Project\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\RestAPI.runtimeconfig.json
+C:\Users\michiel\Documents\School\Cloud API\Project\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\RestAPI.runtimeconfig.dev.json
+C:\Users\michiel\Documents\School\Cloud API\Project\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\RestAPI.dll
+C:\Users\michiel\Documents\School\Cloud API\Project\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\RestAPI.pdb
+C:\Users\michiel\Documents\School\Cloud API\Project\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.csprojAssemblyReference.cache
+C:\Users\michiel\Documents\School\Cloud API\Project\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.csproj.CoreCompileInputs.cache
+C:\Users\michiel\Documents\School\Cloud API\Project\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.RazorAssemblyInfo.cache
+C:\Users\michiel\Documents\School\Cloud API\Project\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.RazorAssemblyInfo.cs
+C:\Users\michiel\Documents\School\Cloud API\Project\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.AssemblyInfoInputs.cache
+C:\Users\michiel\Documents\School\Cloud API\Project\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.AssemblyInfo.cs
+C:\Users\michiel\Documents\School\Cloud API\Project\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.RazorTargetAssemblyInfo.cache
+C:\Users\michiel\Documents\School\Cloud API\Project\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.dll
+C:\Users\michiel\Documents\School\Cloud API\Project\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.pdb

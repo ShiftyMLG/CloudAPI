@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -33,9 +34,22 @@ namespace RestAPI
                     Configuration.GetConnectionString("ExternalConnection")
                     )
               );
+
+
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.Authority = "https://accounts.google.com";      // De uitgever van het token (en waarbij dus de geldigheid kan worden afgetoetst)
+                    options.Audience = "802138658731-7gqqg9oftq3vs1nm0grj2tohjsqaj76b.apps.googleusercontent.com";   // diegene waarvoor het token bestemt is.
+                    options.TokenValidationParameters.ValidateIssuer = false;
+
+                });
             services.AddMvc();
             services.AddCors();
         }
+
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, FavouriteContext favouriteContext)
@@ -56,7 +70,7 @@ namespace RestAPI
                     .AllowAnyMethod()
                     .AllowAnyHeader());
             }
-
+            app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();
             DBInitializer.Initialize(favouriteContext);
