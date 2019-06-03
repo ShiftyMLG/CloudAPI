@@ -23,6 +23,8 @@ import { FavouritesComponent } from './favourites/favourites.component';
 import { PlaceComponent } from './api/place/place.component';
 import { ItemComponent } from './favourites/item/item.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {GoogleSignInComponent} from 'angular-google-signin';
+
 
 
 
@@ -37,7 +39,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     SearchIdComponent,
     FavouritesComponent,
     PlaceComponent,
-    ItemComponent
+    ItemComponent,
+    GoogleSignInComponent
   ],
   imports: [
     BrowserAnimationsModule,
